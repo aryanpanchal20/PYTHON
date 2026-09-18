@@ -73,11 +73,30 @@
 i=1
 ch=97
 
-while i<=3:
+# while i<=3:
+#     j=1
+#     while j<=i:
+#         print(chr(ch),end=" ")
+#         ch+=1
+#         j+=1
+#     print()
+#     i+=1
+
+
+i=1
+n=4
+while i<=n:
+    k=1
+    while k<=n-i:
+        print(" " ,end="")
+        k+=1
     j=1
     while j<=i:
-        print(chr(ch),end=" ")
-        ch+=1
+        print("*",end=" ")
         j+=1
+
     print()
     i+=1
+
+print()
+
