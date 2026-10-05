@@ -7,25 +7,27 @@ foodmenu = {
         }
     },
 
-    2:{
-        "Main Course":{
-            1: "Biryani",
-            2: "Paneer Butter Masala",
-            3: "Naan"
+    # 2:{
+    #     "Main Course":{
+    #         1: "Biryani",
+    #         2: "Paneer Butter Masala",
+    #         3: "Naan"
              
-        }
-    },
+    #     }
+    # },
 
     
-    3:{
-        "Dessert":{
-            1: "IceCream",
-            2: "Rasmalai",
-            3: "Rabdi"
+    # 3:{
+    #     "Dessert":{
+    #         1: "IceCream",
+    #         2: "Rasmalai",
+    #         3: "Rabdi"
              
-        }
-    },
+    #     }
+    # },
 }
+
+selected=[];
 
 while True:
     print("================MENU================")
@@ -40,46 +42,63 @@ while True:
     if choice==4:
         break
 
+     
     if choice==1:
 
         print("==================STARTER================")
+        
 
         print("1",foodmenu[1]['Starter'][1])
-    #    print("2",foodmenu[1]['Starter'][2])
-     #   print("3",foodmenu[1]['Starter'][3])
+        print("2",foodmenu[1]['Starter'][2])
+        print("3",foodmenu[1]['Starter'][3])
 
+        
         item=int(input("Enter Your Choice"))
 
-        print("You selected",foodmenu[1]["Starter"][item])
+
+        selected.append(foodmenu[1]["Starter"][item])
+
+        print("Item Added")
+
+        
 
     
-    elif choice==2:
+    # elif choice==2:
 
-        print("================MAIN COURSE===============")
+    #     print("================MAIN COURSE===============")
 
-        print("1",foodmenu[2]['Starter'][1])
-        print("2",foodmenu[2]['Starter'][2])
-        print("3",foodmenu[2]['Starter'][3])
+    #     print("1",foodmenu[2]['Starter'][1])
+    #     print("2",foodmenu[2]['Starter'][2])
+    #     print("3",foodmenu[2]['Starter'][3])
 
-        item=int(input("Enter Your Choice"))
+    #     item=int(input("Enter Your Choice"))
 
-        print("You selected",foodmenu[2]["Starter"][item])
+    #     print("You selected",foodmenu[2]["Starter"][item])
 
     
-    elif choice==3:
+    # elif choice==3:
 
-        print("===============DESSERT=====================")
+    #     print("===============DESSERT=====================")
 
-        print("1",foodmenu[3]['Starter'][1])
-        print("2",foodmenu[3]['Starter'][2])
-        print("3",foodmenu[3]['Starter'][3])
+    #     print("1",foodmenu[3]['Starter'][1])
+    #     print("2",foodmenu[3]['Starter'][2])
+    #     print("3",foodmenu[3]['Starter'][3])
 
-        item=int(input("Enter Your Choice"))
+    #     item=int(input("Enter Your Choice"))
 
-        print("You selected",foodmenu[3]["Starter"][item])
+    #     print("You selected",foodmenu[3]["Starter"][item])
 
     else:
         print("Invalid Choice")
+
+print("\n================ YOUR ORDER ================")
+
+for item in selected:
+    for name, price in item.items():
+        print(name, "=", price)
+
+
+
 
 # print("=================MENU===================")
 # print("==================STARTER================")
